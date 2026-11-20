@@ -5,3 +5,39 @@ Teste online: https://guignn.github.io/astronomy-website/
 
 Leia o arquivo LEIA-ME.txt para integrantes, objetivo e instruções.
 
+NEBULOSA AZUL - Site sobre astronomia
+=====================================
+
+INTEGRANTES
+- Arthur Gomes
+- Enzo Braga
+- Guilherme Gonçalves
+- Lucas Caldeira
+- Yasmin Merlim
+
+TEMA
+Astronomia e corpos celestes: estrelas, buracos negros, galáxias, nebulosas e cometas.
+
+OBJETIVO
+Tornar a astronomia acessível, divertida e inspiradora, reunindo em um só lugar informações
+simples sobre os corpos celestes. Projeto escolar com empresa fictícia.
+
+COMO ABRIR
+1. Extraia a pasta compactada (ZIP), mantendo a estrutura de pastas.
+2. Dê dois cliques em index.html (abre no navegador). Não precisa de internet nem de instalação.
+3. Use o menu para visitar: Início, Sobre, Conteúdo, Explore e Contato.
+
+ESTRUTURA
+index.html, sobre.html, conteudo.html, explore.html, contato.html
+css/style.css    estilos compartilhados
+js/script.js     menu responsivo, filtro, janela de detalhes, validação do formulário e perguntas frequentes
+imagens/         imagens do site (créditos na página Sobre)
+
+FUNCIONALIDADES EM JAVASCRIPT
+1. Menu responsivo (todas as páginas)
+2. Filtro de cartões por categoria e palavra (Explore)
+3. Validação do formulário, demonstrativo: nada é enviado (Contato)
+4. Perguntas frequentes que abrem e fecham (Contato)
+Extra: janela com detalhes de cada objeto (Explore)
+
+SITE ONLINE: https://guignn.github.io/astronomy-website/
