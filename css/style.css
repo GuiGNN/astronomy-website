@@ -202,3 +202,39 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ===== Acessibilidade: link para pular ao conteúdo e texto só para leitor de tela ===== */
+.pular { position: absolute; left: 8px; top: -80px; z-index: 20; padding: 10px 16px; background: var(--dourado); color: var(--azul-marinho); font-weight: bold; border-radius: 6px; }
+.pular:focus { top: 8px; }
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hero .apresentacao { max-width: 700px; margin: 0 auto 24px; color: var(--texto-suave); }
+
+/* ===== Cartões do Explore: o cartão inteiro é clicável ===== */
+.cartao { position: relative; }
+.abrir { padding: 0; background: none; border: 0; color: var(--branco); font: inherit; font-weight: bold; text-align: left; cursor: pointer; }
+.abrir::after { content: ""; position: absolute; inset: 0; border-radius: 10px; }
+.abrir:focus-visible { outline: none; }
+.abrir:focus-visible::after { outline: 3px solid var(--dourado); outline-offset: 2px; }
+.cartao:hover .abrir { color: var(--dourado); }
+.cartao .tipo { color: var(--texto-suave); font-size: 15px; }
+.cartao .ver { color: var(--dourado); font-weight: bold; margin-top: 10px; }
+
+/* ===== Janela de detalhes (dialog) ===== */
+dialog { margin: auto; width: min(900px, 92vw); max-height: 90vh; padding: 0; background: var(--azul-espacial); color: var(--branco); border: 1px solid var(--borda); border-radius: 12px; overflow: hidden; }
+dialog::backdrop { background: rgba(5, 12, 28, 0.8); }
+body:has(dialog[open]) { overflow: hidden; }
+.dialogo { display: flex; gap: 24px; padding: 28px; max-height: 90vh; overflow-y: auto; }
+.foto { flex: 0 0 280px; }
+.foto img { width: 100%; height: auto; border-radius: 8px; }
+.foto figcaption { margin-top: 6px; font-size: 14px; color: var(--texto-suave); }
+.texto { flex: 1; min-width: 0; }
+.texto h3 { margin-top: 16px; color: var(--dourado); }
+.texto ul { list-style: disc; padding-left: 22px; }
+.texto li { margin-bottom: 6px; }
+.fechar { position: absolute; top: 10px; right: 12px; z-index: 1; width: 40px; height: 40px; background: var(--azul-marinho); color: var(--branco); border: 1px solid var(--texto-suave); border-radius: 50%; font-size: 24px; line-height: 1; cursor: pointer; }
+.fechar:hover { background: var(--azul-nebulosa); }
+@media (max-width: 700px) {
+  .dialogo { flex-direction: column; padding: 20px; }
+  .foto { flex: none; }
+  .foto img { max-height: 260px; object-fit: cover; }
+}
