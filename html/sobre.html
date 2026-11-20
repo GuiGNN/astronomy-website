@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Objetivo, público-alvo, autores e créditos do site Nebulosa Azul.">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
   <title>Sobre | Nebulosa Azul</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
   <header>
     <a class="logo" href="index.html">Nebulosa Azul</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -20,7 +23,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <h1>Sobre</h1>
 
     <section>
@@ -58,11 +61,32 @@
         <li>Yasmin Merlim</li>
       </ul>
     </section>
+
+    <section id="creditos">
+      <h2>Fontes e créditos</h2>
+      <p>Os textos foram escritos pelo grupo a partir de dados divulgados por instituições científicas:</p>
+      <ul>
+        <li><a href="https://www.nasa.gov">NASA</a></li>
+        <li><a href="https://www.esa.int">ESA (Agência Espacial Europeia)</a></li>
+        <li><a href="https://eventhorizontelescope.org">Event Horizon Telescope</a></li>
+      </ul>
+      <h3>Créditos das imagens</h3>
+      <!-- CONFERIR: confirme cada crédito com o site de onde baixaram a imagem e preencha os que faltam. -->
+      <ul>
+        <li>Imagem de destaque da página inicial: ilustração própria em SVG.</li>
+        <li>Messier 87*: Event Horizon Telescope Collaboration, 2019.</li>
+        <li>Cygnus X-1: NASA/CXC/M. Weiss (ilustração).</li>
+        <li>'Oumuamua: ESO/M. Kornmesser (ilustração).</li>
+        <li>Nebulosa de Órion: NASA, ESA, M. Robberto (STScI/ESA) e equipe do Hubble Space Telescope Orion Treasury Project.</li>
+        <li>Pilares da Criação: NASA, ESA, CSA e STScI.</li>
+        <li>Sol, Betelgeuse, UY Scuti, Via Láctea, Andrômeda, Cometa Halley e as ilustrações de estrela, buraco negro e galáxia: [preencher autor e site de origem de cada imagem].</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
     <p>© 2026 Nebulosa Azul. Projeto escolar com empresa fictícia.</p>
-    <p>Fontes: NASA, ESA e Event Horizon Telescope. Imagens: ilustrações próprias em SVG.</p>
+    <p>Fontes: NASA, ESA e Event Horizon Telescope. <a href="sobre.html#creditos">Créditos das imagens</a>.</p>
   </footer>
 </body>
 </html>
