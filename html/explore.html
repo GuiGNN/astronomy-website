@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore | Nebulosa Azul</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Nebulosa Azul</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="conteudo.html">Conteúdo</a>
+      <a href="explore.html" aria-current="page">Explore</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Explore</h1>
+    <p class="intro">Filtre por categoria ou busque pelo nome. Clique em um objeto para ver os detalhes.</p>
+
+    <section aria-label="Filtros">
+      <div class="filtros">
+        <button type="button" class="filtro" data-categoria="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="filtro" data-categoria="Estrelas" aria-pressed="false">Estrelas</button>
+        <button type="button" class="filtro" data-categoria="Buracos negros" aria-pressed="false">Buracos negros</button>
+        <button type="button" class="filtro" data-categoria="Galáxias" aria-pressed="false">Galáxias</button>
+        <button type="button" class="filtro" data-categoria="Nebulosas" aria-pressed="false">Nebulosas</button>
+        <button type="button" class="filtro" data-categoria="Corpos menores" aria-pressed="false">Corpos menores</button>
+      </div>
+      <label for="busca">Buscar</label>
+      <input type="search" id="busca" placeholder="Ex.: galáxia, Sol, cometa">
+      <p id="contador" role="status"></p>
+    </section>
+
+    <section class="grade" aria-label="Objetos do espaço">
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Anã amarela (sequência principal)" data-imagem="../imagens/solEx.webp">
+        <p class="etiqueta">Estrelas</p>
+        <h3><button type="button" class="abrir">Sol</button></h3>
+        <p class="tipo">Anã amarela (sequência principal)</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">A estrela no centro do Sistema Solar. Sua gravidade mantém os planetas em órbita, e sua luz e calor sustentam a vida na Terra.</p>
+          <ul class="detalhes">
+            <li><strong>Diâmetro:</strong> cerca de 1,39 milhão de km</li>
+            <li><strong>Distância da Terra:</strong> 149,6 milhões de km (1 UA)</li>
+            <li><strong>Idade:</strong> cerca de 4,6 bilhões de anos</li>
+          </ul>
+          <ul class="fatos">
+            <li>A luz do Sol leva cerca de 8 minutos para chegar à Terra.</li>
+            <li>O vento solar, ao encontrar o campo magnético da Terra, cria as auroras.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Supergigante vermelha" data-imagem="../imagens/BetelgeuseEx.jpg">
+        <p class="etiqueta">Estrelas</p>
+        <h3><button type="button" class="abrir">Betelgeuse</button></h3>
+        <p class="tipo">Supergigante vermelha</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Estrela vermelha e enorme na constelação de Órion, em fase final de vida. Um dia deve explodir como supernova.</p>
+          <ul class="detalhes">
+            <li><strong>Tamanho:</strong> centenas de vezes o raio do Sol</li>
+            <li><strong>Distância da Terra:</strong> 550 a 640 anos-luz</li>
+            <li><strong>Constelação:</strong> Órion</li>
+          </ul>
+          <ul class="fatos">
+            <li>Escureceu de forma visível entre 2019 e 2020, depois de expelir uma nuvem de poeira.</li>
+            <li>No lugar do Sol, ultrapassaria a órbita de Marte.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Hipergigante vermelha" data-imagem="../imagens/UYEx.png">
+        <p class="etiqueta">Estrelas</p>
+        <h3><button type="button" class="abrir">UY Scuti</button></h3>
+        <p class="tipo">Hipergigante vermelha</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Uma das maiores estrelas conhecidas, na constelação do Escudo. Seu tamanho exato ainda é incerto.</p>
+          <ul class="detalhes">
+            <li><strong>Tamanho:</strong> 900 a 1.700 vezes o raio do Sol (estimativas variam)</li>
+            <li><strong>Distância da Terra:</strong> cerca de 9.500 anos-luz</li>
+            <li><strong>Constelação:</strong> Escudo (Scutum)</li>
+          </ul>
+          <ul class="fatos">
+            <li>No lugar do Sol, engoliria as órbitas dos planetas rochosos.</li>
+            <li>É uma estrela variável: seu brilho pulsa com o tempo.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="../imagens/sagitarioAEx.jpg">
+        <p class="etiqueta">Buracos negros</p>
+        <h3><button type="button" class="abrir">Sagitário A*</button></h3>
+        <p class="tipo">Buraco negro supermassivo</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">O buraco negro no centro da Via Láctea. É relativamente calmo, e estrelas giram ao redor dele.</p>
+          <ul class="detalhes">
+            <li><strong>Massa:</strong> cerca de 4 milhões de vezes a do Sol</li>
+            <li><strong>Distância da Terra:</strong> cerca de 26.000 anos-luz</li>
+            <li><strong>Horizonte de eventos:</strong> cerca de 24 milhões de km de diâmetro</li>
+          </ul>
+          <ul class="fatos">
+            <li>Sua primeira imagem foi divulgada em 2022 pelo Event Horizon Telescope.</li>
+            <li>Estrelas próximas dele se movem a velocidades altíssimas.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="../imagens/Messier 87Ex.jpg">
+        <p class="etiqueta">Buracos negros</p>
+        <h3><button type="button" class="abrir">Messier 87*</button></h3>
+        <p class="tipo">Buraco negro supermassivo</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Buraco negro gigante no centro da galáxia M87, na constelação de Virgem. Ele lança um jato de plasma que se estende por milhares de anos-luz.</p>
+          <ul class="detalhes">
+            <li><strong>Massa:</strong> cerca de 6,5 bilhões de vezes a do Sol</li>
+            <li><strong>Distância da Terra:</strong> cerca de 53,5 milhões de anos-luz</li>
+            <li><strong>Galáxia:</strong> Messier 87</li>
+          </ul>
+          <ul class="fatos">
+            <li>Foi o primeiro buraco negro fotografado, em imagem divulgada em 2019.</li>
+            <li>Seu horizonte de eventos é maior que todo o Sistema Solar.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro de massa estelar" data-imagem="../imagens/Cygnus X-1Ex.jpg">
+        <p class="etiqueta">Buracos negros</p>
+        <h3><button type="button" class="abrir">Cygnus X-1</button></h3>
+        <p class="tipo">Buraco negro de massa estelar</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Buraco negro na constelação do Cisne. Ele puxa gás de uma estrela companheira e forma um disco muito quente, que emite raios X.</p>
+          <ul class="detalhes">
+            <li><strong>Massa:</strong> cerca de 21 vezes a do Sol</li>
+            <li><strong>Distância da Terra:</strong> cerca de 7.200 anos-luz</li>
+            <li><strong>Horizonte de eventos:</strong> cerca de 60 km de raio</li>
+          </ul>
+          <ul class="fatos">
+            <li>Descoberto em 1964, foi um dos primeiros objetos aceitos como buraco negro.</li>
+            <li>Motivou uma aposta amistosa entre Stephen Hawking e Kip Thorne.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral barrada" data-imagem="../imagens/Via LácteaEx.png">
+        <p class="etiqueta">Galáxias</p>
+        <h3><button type="button" class="abrir">Via Láctea</button></h3>
+        <p class="tipo">Galáxia espiral barrada</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">A galáxia onde vivemos. Reúne centenas de bilhões de estrelas, gás, poeira e matéria escura.</p>
+          <ul class="detalhes">
+            <li><strong>Diâmetro:</strong> 100.000 a 120.000 anos-luz</li>
+            <li><strong>Estrelas:</strong> entre 100 e 400 bilhões</li>
+            <li><strong>Nossa posição:</strong> a cerca de 26.000 anos-luz do centro</li>
+          </ul>
+          <ul class="fatos">
+            <li>O nome vem da faixa esbranquiçada, parecida com leite, que se vê no céu escuro.</li>
+            <li>O Sistema Solar fica no Braço de Órion.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral" data-imagem="../imagens/AndrômedaEx.jpeg">
+        <p class="etiqueta">Galáxias</p>
+        <h3><button type="button" class="abrir">Andrômeda</button></h3>
+        <p class="tipo">Galáxia espiral</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">A maior galáxia do Grupo Local e a grande espiral mais próxima da Via Láctea. Pode ser vista a olho nu sob um céu bem escuro.</p>
+          <ul class="detalhes">
+            <li><strong>Diâmetro:</strong> cerca de 220.000 anos-luz</li>
+            <li><strong>Estrelas:</strong> cerca de 1 trilhão</li>
+            <li><strong>Distância da Terra:</strong> cerca de 2,5 milhões de anos-luz</li>
+          </ul>
+          <ul class="fatos">
+            <li>Também é chamada de Messier 31 (M31).</li>
+            <li>Ela se aproxima da Via Láctea e pode se fundir a ela daqui a bilhões de anos.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa de emissão" data-imagem="../imagens/Pilares da CriaçãoEx.webp">
+        <p class="etiqueta">Nebulosas</p>
+        <h3><button type="button" class="abrir">Pilares da Criação</button></h3>
+        <p class="tipo">Nebulosa de emissão</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Colunas de gás e poeira na Nebulosa da Águia (M16). São berçários onde novas estrelas nascem.</p>
+          <ul class="detalhes">
+            <li><strong>Tamanho:</strong> 4 a 5 anos-luz (coluna principal)</li>
+            <li><strong>Distância da Terra:</strong> cerca de 6.500 anos-luz</li>
+            <li><strong>Constelação:</strong> Serpente</li>
+          </ul>
+          <ul class="fatos">
+            <li>Ficaram famosos em imagens do telescópio Hubble e, depois, do James Webb.</li>
+            <li>A radiação de estrelas jovens vizinhas vai desgastando as colunas.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa difusa (M42)" data-imagem="../imagens/Nebulosa de ÓrionEx.jpg">
+        <p class="etiqueta">Nebulosas</p>
+        <h3><button type="button" class="abrir">Nebulosa de Órion</button></h3>
+        <p class="tipo">Nebulosa difusa (M42)</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">Um dos berçários de estrelas mais próximos e ativos, logo abaixo do cinturão de Órion.</p>
+          <ul class="detalhes">
+            <li><strong>Tamanho:</strong> cerca de 24 anos-luz</li>
+            <li><strong>Distância da Terra:</strong> cerca de 1.344 anos-luz</li>
+            <li><strong>Constelação:</strong> Órion</li>
+          </ul>
+          <ul class="fatos">
+            <li>Pode ser vista a olho nu, como uma estrela borrada.</li>
+            <li>Abriga milhares de estrelas jovens e sistemas planetários em formação.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Corpos menores" data-tipo="Cometa periódico" data-imagem="../imagens/Cometa HalleyEx.jpg">
+        <p class="etiqueta">Corpos menores</p>
+        <h3><button type="button" class="abrir">Cometa Halley</button></h3>
+        <p class="tipo">Cometa periódico</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">O cometa mais famoso. Perto do Sol, o gelo do núcleo evapora e forma uma cauda brilhante.</p>
+          <ul class="detalhes">
+            <li><strong>Núcleo:</strong> cerca de 15 km por 8 km</li>
+            <li><strong>Período orbital:</strong> 75 a 76 anos</li>
+            <li><strong>Última passagem:</strong> 1986 (a próxima será em 2061)</li>
+          </ul>
+          <ul class="fatos">
+            <li>Uma pessoa pode vê-lo duas vezes na vida, pois ele volta a cada 75 a 76 anos.</li>
+            <li>Sua cauda é feita de gás e poeira liberados pelo núcleo.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="cartao" data-categoria="Corpos menores" data-tipo="Objeto interestelar" data-imagem="../imagens/OumuamuaEx.jpg">
+        <p class="etiqueta">Corpos menores</p>
+        <h3><button type="button" class="abrir">'Oumuamua</button></h3>
+        <p class="tipo">Objeto interestelar</p>
+        <p class="ver">Ver detalhes</p>
+        <div class="dados" hidden>
+          <p class="sobre">O primeiro objeto vindo de fora do Sistema Solar já detectado, em 2017. Tem formato alongado e uma trajetória que não volta.</p>
+          <ul class="detalhes">
+            <li><strong>Tamanho:</strong> cerca de 400 a 800 m de comprimento (estimativa)</li>
+            <li><strong>Descoberta:</strong> 2017</li>
+            <li><strong>Situação:</strong> já saiu do Sistema Solar</li>
+          </ul>
+          <ul class="fatos">
+            <li>O nome é havaiano e significa algo como mensageiro vindo de longe.</li>
+            <li>Depois dele vieram 2I/Borisov (2019) e 3I/ATLAS (2025).</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <p id="sem-resultados" class="aviso" hidden>Nenhum objeto encontrado. Tente outra palavra ou clique em Todos.</p>
+
+    <dialog id="detalhe" aria-labelledby="detalhe-titulo">
+      <button type="button" class="fechar" id="fechar" aria-label="Fechar">&times;</button>
+      <div class="dialogo">
+        <figure class="foto">
+          <img id="detalhe-foto" alt="" width="300" height="400">
+          <figcaption>Ilustração sem escala real</figcaption>
+        </figure>
+        <div class="texto">
+          <p class="etiqueta" id="detalhe-categoria"></p>
+          <h2 id="detalhe-titulo"></h2>
+          <p><strong>Tipo:</strong> <span id="detalhe-tipo"></span></p>
+          <h3>Sobre</h3>
+          <p id="detalhe-sobre"></p>
+          <h3>Detalhes</h3>
+          <ul id="detalhe-detalhes"></ul>
+          <h3>Fatos</h3>
+          <ul id="detalhe-fatos"></ul>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>© 2026 Nebulosa Azul. Projeto escolar com empresa fictícia.</p>
+    <p>Fontes: NASA, ESA e Event Horizon Telescope. Imagens: ilustrações próprias em SVG.</p>
+  </footer>
+</body>
+</html>
