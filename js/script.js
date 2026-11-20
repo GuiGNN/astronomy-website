@@ -16,6 +16,13 @@ function alternarMenu() {
 }
 
 if (botaoMenu && menu) {
+  // Se a tela voltar a ser grande com o menu aberto, fecha o menu para não ficar desatualizado
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 700 && menu.classList.contains('aberto')) {
+      alternarMenu();
+    }
+  });
+
   // O botão (button) já responde a clique, Enter e Espaço
   botaoMenu.addEventListener('click', alternarMenu);
 
@@ -49,7 +56,9 @@ function aplicarFiltro() {
 
   cartoes.forEach(function (cartao) {
     const daCategoria = categoriaAtual === 'todos' || cartao.dataset.categoria === categoriaAtual;
-    const temPalavra = normalizar(cartao.textContent).includes(termo);
+    // Busca só no nome, categoria, tipo e descrição (não em textos como "Ver detalhes")
+    const textoBusca = cartao.querySelector('.abrir').textContent + ' ' + cartao.dataset.categoria + ' ' + cartao.dataset.tipo + ' ' + cartao.querySelector('.sobre').textContent;
+    const temPalavra = normalizar(textoBusca).includes(termo);
 
     if (daCategoria && temPalavra) {
       cartao.hidden = false;
@@ -95,7 +104,7 @@ function abrirDetalhe(cartao) {
   document.querySelector('#detalhe-fatos').innerHTML = dados.querySelector('.fatos').innerHTML;
 
   foto.src = cartao.dataset.imagem; // troque o data-imagem do cartão por uma foto real, se quiser
-  foto.alt = 'Ilustração representando ' + nome;
+  foto.alt = 'Imagem de ' + nome;
 
   janela.querySelector('.dialogo').scrollTop = 0;
   janela.showModal(); // showModal já fecha com Esc e prende o foco dentro da janela
@@ -174,9 +183,16 @@ if (formulario && statusForm) {
     }
   });
 
-  // Corrige o aviso assim que a pessoa sai do campo
   campos.forEach(function (campo) {
-    campo.addEventListener('blur', function () { validarCampo(campo); });
+    // Só valida ao sair do campo se a pessoa já escreveu algo (ou se ele já estava com erro)
+    campo.addEventListener('blur', function () {
+      if (campo.value !== '' || campo.getAttribute('aria-invalid') === 'true') { validarCampo(campo); }
+    });
+    // Ao digitar de novo: apaga o aviso de sucesso e corrige o erro em tempo real
+    campo.addEventListener('input', function () {
+      statusForm.textContent = '';
+      if (campo.getAttribute('aria-invalid') === 'true') { validarCampo(campo); }
+    });
   });
 }
 
