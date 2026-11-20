@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Doze objetos do espaço com filtro por categoria e busca por palavra.">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
   <title>Explore | Nebulosa Azul</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
   <header>
     <a class="logo" href="index.html">Nebulosa Azul</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -20,11 +23,12 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <h1>Explore</h1>
     <p class="intro">Filtre por categoria ou busque pelo nome. Clique em um objeto para ver os detalhes.</p>
 
-    <section aria-label="Filtros">
+    <section aria-labelledby="t-filtros">
+      <h2 class="so-leitor" id="t-filtros">Filtros</h2>
       <div class="filtros">
         <button type="button" class="filtro" data-categoria="todos" aria-pressed="true">Todos</button>
         <button type="button" class="filtro" data-categoria="Estrelas" aria-pressed="false">Estrelas</button>
@@ -38,8 +42,9 @@
       <p id="contador" role="status"></p>
     </section>
 
-    <section class="grade" aria-label="Objetos do espaço">
-      <article class="cartao" data-categoria="Estrelas" data-tipo="Anã amarela (sequência principal)" data-imagem="../imagens/solEx.webp">
+    <section class="grade" aria-labelledby="t-objetos">
+      <h2 class="so-leitor" id="t-objetos">Objetos do espaço</h2>
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Anã amarela (sequência principal)" data-imagem="imagens/sol.jpg">
         <p class="etiqueta">Estrelas</p>
         <h3><button type="button" class="abrir">Sol</button></h3>
         <p class="tipo">Anã amarela (sequência principal)</p>
@@ -57,7 +62,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Estrelas" data-tipo="Supergigante vermelha" data-imagem="../imagens/BetelgeuseEx.jpg">
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Supergigante vermelha" data-imagem="imagens/betelgeuse.jpg">
         <p class="etiqueta">Estrelas</p>
         <h3><button type="button" class="abrir">Betelgeuse</button></h3>
         <p class="tipo">Supergigante vermelha</p>
@@ -75,7 +80,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Estrelas" data-tipo="Hipergigante vermelha" data-imagem="../imagens/UYEx.png">
+      <article class="cartao" data-categoria="Estrelas" data-tipo="Hipergigante vermelha" data-imagem="imagens/uy-scuti.jpg">
         <p class="etiqueta">Estrelas</p>
         <h3><button type="button" class="abrir">UY Scuti</button></h3>
         <p class="tipo">Hipergigante vermelha</p>
@@ -93,7 +98,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="../imagens/sagitarioAEx.jpg">
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="imagens/buraco-negro.jpg">
         <p class="etiqueta">Buracos negros</p>
         <h3><button type="button" class="abrir">Sagitário A*</button></h3>
         <p class="tipo">Buraco negro supermassivo</p>
@@ -111,7 +116,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="../imagens/Messier 87Ex.jpg">
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro supermassivo" data-imagem="imagens/messier-87.jpg">
         <p class="etiqueta">Buracos negros</p>
         <h3><button type="button" class="abrir">Messier 87*</button></h3>
         <p class="tipo">Buraco negro supermassivo</p>
@@ -129,7 +134,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro de massa estelar" data-imagem="../imagens/Cygnus X-1Ex.jpg">
+      <article class="cartao" data-categoria="Buracos negros" data-tipo="Buraco negro de massa estelar" data-imagem="imagens/cygnus-x1.jpg">
         <p class="etiqueta">Buracos negros</p>
         <h3><button type="button" class="abrir">Cygnus X-1</button></h3>
         <p class="tipo">Buraco negro de massa estelar</p>
@@ -147,7 +152,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral barrada" data-imagem="../imagens/Via LácteaEx.png">
+      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral barrada" data-imagem="imagens/via-lactea.jpg">
         <p class="etiqueta">Galáxias</p>
         <h3><button type="button" class="abrir">Via Láctea</button></h3>
         <p class="tipo">Galáxia espiral barrada</p>
@@ -165,7 +170,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral" data-imagem="../imagens/AndrômedaEx.jpeg">
+      <article class="cartao" data-categoria="Galáxias" data-tipo="Galáxia espiral" data-imagem="imagens/andromeda.jpg">
         <p class="etiqueta">Galáxias</p>
         <h3><button type="button" class="abrir">Andrômeda</button></h3>
         <p class="tipo">Galáxia espiral</p>
@@ -183,7 +188,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa de emissão" data-imagem="../imagens/Pilares da CriaçãoEx.webp">
+      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa de emissão" data-imagem="imagens/pilares-da-criacao.jpg">
         <p class="etiqueta">Nebulosas</p>
         <h3><button type="button" class="abrir">Pilares da Criação</button></h3>
         <p class="tipo">Nebulosa de emissão</p>
@@ -201,7 +206,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa difusa (M42)" data-imagem="../imagens/Nebulosa de ÓrionEx.jpg">
+      <article class="cartao" data-categoria="Nebulosas" data-tipo="Nebulosa difusa (M42)" data-imagem="imagens/nebulosa-orion.jpg">
         <p class="etiqueta">Nebulosas</p>
         <h3><button type="button" class="abrir">Nebulosa de Órion</button></h3>
         <p class="tipo">Nebulosa difusa (M42)</p>
@@ -219,7 +224,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Corpos menores" data-tipo="Cometa periódico" data-imagem="../imagens/Cometa HalleyEx.jpg">
+      <article class="cartao" data-categoria="Corpos menores" data-tipo="Cometa periódico" data-imagem="imagens/cometa-halley.jpg">
         <p class="etiqueta">Corpos menores</p>
         <h3><button type="button" class="abrir">Cometa Halley</button></h3>
         <p class="tipo">Cometa periódico</p>
@@ -237,7 +242,7 @@
           </ul>
         </div>
       </article>
-      <article class="cartao" data-categoria="Corpos menores" data-tipo="Objeto interestelar" data-imagem="../imagens/OumuamuaEx.jpg">
+      <article class="cartao" data-categoria="Corpos menores" data-tipo="Objeto interestelar" data-imagem="imagens/oumuamua.jpg">
         <p class="etiqueta">Corpos menores</p>
         <h3><button type="button" class="abrir">'Oumuamua</button></h3>
         <p class="tipo">Objeto interestelar</p>
@@ -263,7 +268,7 @@
       <div class="dialogo">
         <figure class="foto">
           <img id="detalhe-foto" alt="" width="300" height="400">
-          <figcaption>Ilustração sem escala real</figcaption>
+          <figcaption>Imagem sem escala real. Créditos na página Sobre.</figcaption>
         </figure>
         <div class="texto">
           <p class="etiqueta" id="detalhe-categoria"></p>
@@ -282,7 +287,7 @@
 
   <footer>
     <p>© 2026 Nebulosa Azul. Projeto escolar com empresa fictícia.</p>
-    <p>Fontes: NASA, ESA e Event Horizon Telescope. Imagens: ilustrações próprias em SVG.</p>
+    <p>Fontes: NASA, ESA e Event Horizon Telescope. <a href="sobre.html#creditos">Créditos das imagens</a>.</p>
   </footer>
 </body>
 </html>
