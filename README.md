@@ -1,5 +1,6 @@
 # astronomy-website
-A ultima versão do nosso trabalho em grupo, a qual fizemos um site que fala sobre corpos celestes!
+Site escolar "Nebulosa Azul" sobre corpos celestes (HTML, CSS e JavaScript).
 
+Teste online: https://guignn.github.io/astronomy-website/
 
-Segue o link para testar o site: https://guignn.github.io/astronomy-website/html/index.html
+Leia o arquivo LEIA-ME.txt para integrantes, objetivo e instruções.
