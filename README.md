@@ -22,6 +22,11 @@ OBJETIVO
 Tornar a astronomia acessível, divertida e inspiradora, reunindo em um só lugar informações
 simples sobre os corpos celestes. Projeto escolar com empresa fictícia.
 
+TECNOLOGIAS USADAS:
+HTML5
+CSS 2.1
+JAVASCRPT
+
 COMO ABRIR
 1. Extraia a pasta compactada (ZIP), mantendo a estrutura de pastas.
 2. Dê dois cliques em index.html (abre no navegador). Não precisa de internet nem de instalação.
